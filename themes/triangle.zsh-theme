@@ -6,7 +6,7 @@ if [[ -n "$SSH_CLIENT" ]]; then
 fi
 local prompt_end="%(?:%{$fg_bold[green]%}:%{$fg_bold[red]%})%(!:#:❯)%{$reset_color%}"
 
-PROMPT="${chroot_status}${return_status} ${user_prompt}%~ ${prompt_end} "
+PROMPT="${chroot_status}${return_status} ${user_prompt}${PWD/#$HOME/~} ${prompt_end} "
 
 local git_status='$(parse_git_dirty)$(git_prompt_info)%{$reset_color%} $(git_remote_status)'
 
