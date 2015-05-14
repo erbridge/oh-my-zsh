@@ -2,9 +2,10 @@ local return_status="%(?:%{$fg_bold[green]%}∆:%{$fg_bold[red]%}∇)%{$reset_co
 if [[ -n "$SSH_CLIENT" ]]; then
     local user_prompt="%n@%m : "
 fi
+local wd_prompt="%4(~:..:)%3~"
 local prompt_end="%(?:%{$fg_bold[green]%}:%{$fg_bold[red]%})%(!:#:❯)%{$reset_color%}"
 
-PROMPT='${chroot_status}${return_status} ${user_prompt}${PWD/#$HOME/~} ${prompt_end} '
+PROMPT='${chroot_status}${return_status} ${user_prompt}${wd_prompt} ${prompt_end} '
 
 local git_status='$(parse_git_dirty)$(git_prompt_info)%{$reset_color%} $(git_remote_status)'
 
