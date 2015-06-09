@@ -11,7 +11,7 @@ local git_status='%{$fg_bold[green]%}$(git_prompt_status)$(git_prompt_info)%{$re
 
 RPROMPT="${git_status}"
 
-ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg_bold[cyan]%}"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="? "
 
 ZSH_THEME_GIT_PROMPT_ADDED="%{$fg_bold[yellow]%}"
 ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg_bold[yellow]%}"
